@@ -1,0 +1,17 @@
+{
+  "name": "trying-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shreyas Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-rate-limit": "^3.4.0",
+    "nodemon": "^1.18.10"
+  }
+}
