@@ -8,7 +8,7 @@ Built using ExpressJS framework in NodeJS.
 [https://thanosapi.herokuapp.com/random/](https://thanosapi.herokuapp.com/random/)
 
 ### Grab a specified number of random Thanos quotes!
-[https://thanosapi.herokuapp.com/random/<integer>/](https://thanosapi.herokuapp.com/random/5/)
+[https://thanosapi.herokuapp.com/random/&lt;integer&gt;/](https://thanosapi.herokuapp.com/random/5/)
 
 ### Grab all Thanos quotes!
 [https://thanosapi.herokuapp.com/all/](https://thanosapi.herokuapp.com/all/)
