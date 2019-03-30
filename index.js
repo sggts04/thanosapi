@@ -20,7 +20,7 @@ app.set('json spaces', 4);
 app.use(limiter);
 
 app.get('/', (req, res) => {
-      res.render('index', {'amount': quotes.length})
+      res.render('index', {amount: quotes.length})
 })
 
 app.get('/random', (req, res) => {
