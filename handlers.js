@@ -13,10 +13,8 @@ function randomFiveQuotes() {
             continue;
         } else {
             indexes.push(index);
+            data.push(quotes[index]);
         }
-    }
-    for (let index of indexes) {
-        data.push(quotes[index]);
     }
     return data;
 }
