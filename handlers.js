@@ -4,19 +4,28 @@ function randomQuote() {
     return quotes[Math.floor(Math.random() * quotes.length)];
 }
 
-function randomFiveQuotes() {
+function randomQuotes(n) {
     var indexes = [];
     var data = [];
-    while (indexes.length < 5) {
-        let index = Math.floor(Math.random() * quotes.length);
-        if (indexes.includes(index)) {
-            continue;
-        } else {
-            indexes.push(index);
-            data.push(quotes[index]);
-        }
+    amount = Number(n);
+    if (amount > quotes.length) {
+        return {"error": "Specified number exceeds number of quotes. Total number of quotes right now are " + String(quotes.length)};
     }
-    return data;
+    else if (amount < 1 || !Number.isInteger(amount)) {
+        return {"error": "Are you retarded?"};
+    }
+    else {   
+        while (indexes.length < amount) {
+            let index = Math.floor(Math.random() * quotes.length);
+            if (indexes.includes(index)) {
+                continue;
+            } else {
+                indexes.push(index);
+                data.push(quotes[index]);
+            }
+        }
+        return data;
+    }
 }
 
 function allQuotes() {
@@ -26,5 +35,5 @@ function allQuotes() {
 module.exports = {
     randomQuote,
     allQuotes,
-    randomFiveQuotes
+    randomQuotes
 };
