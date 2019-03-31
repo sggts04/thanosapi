@@ -32,8 +32,13 @@ function allQuotes() {
     return quotes;
 }
 
+function numOfQuotes() {
+    return quotes.length;
+}
+
 module.exports = {
     randomQuote,
     allQuotes,
-    randomQuotes
+    randomQuotes,
+    numOfQuotes
 };

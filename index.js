@@ -3,9 +3,9 @@ const rateLimit = require("express-rate-limit");
 const {
       randomQuote,
       allQuotes,
-      randomQuotes
+      randomQuotes,
+      numOfQuotes
 } = require('./handlers');
-const quotes = require('./quotes/quotes.json')
 const app = express();
 
 const limiter = rateLimit({
@@ -20,7 +20,7 @@ app.set('json spaces', 4);
 app.use(limiter);
 
 app.get('/', (req, res) => {
-      res.render('index', {amount: quotes.length})
+      res.render('index', {amount: numOfQuotes()})
 })
 
 app.get('/random', (req, res) => {
