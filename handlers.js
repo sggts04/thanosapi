@@ -5,8 +5,8 @@ function randomQuote() {
 }
 
 function randomQuotes(n) {
-    var indexes = [];
     var data = [];
+    var quotesCopy = quotes.slice();
     amount = Number(n);
     if (amount > quotes.length) {
         return {"error": "Specified number exceeds number of quotes. Total number of quotes right now are " + String(quotes.length)};
@@ -15,14 +15,10 @@ function randomQuotes(n) {
         return {"error": "Are you retarded?"};
     }
     else {   
-        while (indexes.length < amount) {
-            let index = Math.floor(Math.random() * quotes.length);
-            if (indexes.includes(index)) {
-                continue;
-            } else {
-                indexes.push(index);
-                data.push(quotes[index]);
-            }
+        while (data.length < amount) {
+            let index = Math.floor(Math.random() * quotesCopy.length);
+            data.push(quotesCopy[index]);
+            quotesCopy.splice(index, 1);
         }
         return data;
     }
