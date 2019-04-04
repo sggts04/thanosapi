@@ -24,7 +24,9 @@ app.get('/', (req, res) => {
 })
 
 app.get('/random', (req, res) => {
-      res.json(randomQuote())
+      let quoteObj = randomQuote();
+      let quoteString = JSON.parse(quoteObj);
+      res.send(quoteString.quote);
 })
 
 app.get('/random/:amount', (req, res) => {

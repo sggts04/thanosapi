@@ -1,7 +1,9 @@
 const quotes = require('./quotes/quotes.json')
 
 function randomQuote() {
-    return quotes[Math.floor(Math.random() * quotes.length)];
+    let quoteObj = quotes[Math.floor(Math.random() * quotes.length)];
+    let quoteString = JSON.stringify(quoteObj);
+    return quoteString;
 }
 
 function randomQuotes(n) {
