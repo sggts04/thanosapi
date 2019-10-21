@@ -19,14 +19,7 @@ Googled thanos quotes and wrote a python script through which I could just input
 
 ## Make a contribution!
 
-Would love to make the api better and more efficient if someone is willing to help. Also if I missed a thanos quote, submit a Pull Request, with the quote added to the quotes/quotes.json file. Make sure the quote is in this format:
-
-```javascript
-{
-  "id": <last joke id + 1>,
-  "quote": "<the quote>"
-}
-```
+Would love to make the api better and more efficient if someone is willing to help. Also if I missed a thanos quote, submit a Pull Request, with the quote added to the quotes/quotes.js file.
 
 ## Run Locally
 * Clone the repo

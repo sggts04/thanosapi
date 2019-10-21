@@ -1,4 +1,4 @@
-const quotes = require('./quotes/quotes.json')
+const quotes = require('./quotes/quotes.js');
 
 function randomQuote() {
     return quotes[Math.floor(Math.random() * quotes.length)];
