@@ -1,5 +1,6 @@
 const express = require('express');
 const rateLimit = require("express-rate-limit");
+const cors = require('cors')
 const {
       randomQuote,
       allQuotes,
@@ -18,6 +19,7 @@ app.enable("trust proxy");
 app.set('view engine', 'ejs');
 app.set('json spaces', 4);
 app.use(limiter);
+app.use(cors());
 
 app.get('/', (req, res) => {
       res.render('index', {amount: numOfQuotes()})
