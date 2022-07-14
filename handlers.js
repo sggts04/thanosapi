@@ -12,7 +12,7 @@ function randomQuotes(n) {
         return {"error": "Specified number exceeds number of quotes. Total number of quotes right now are " + String(quotes.length)};
     }
     else if (amount < 1 || !Number.isInteger(amount)) {
-        return {"error": "Are you retarded?"};
+        return {"error": "Invalid number"};
     }
     else {   
         while (data.length < amount) {
